@@ -1,6 +1,6 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2018-10-22T15:56:45
+# Project created by QtCreator 2018-10-23T09:51:15
 #
 #-------------------------------------------------
 
@@ -8,7 +8,7 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = MultilingualSupportSoftware
+TARGET = QtSampleB
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
@@ -31,5 +31,6 @@ HEADERS  += mainwindow.h
 FORMS    += mainwindow.ui
 
 TRANSLATIONS += english.ts \
-simplify.ts \
-traditional.ts
+                simplify.ts\
+                traditional.ts\
+                japanese.ts

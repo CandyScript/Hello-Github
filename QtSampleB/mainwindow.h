@@ -16,11 +16,15 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_action_triggered();
+    void on_actionDocument_triggered();
+
+    void on_actionChinese_Simplify_triggered();
+
+    void on_actionChinese_Tranitional_triggered();
 
     void on_actionEnglish_triggered();
 
-    void on_actionChinese_Traditional_triggered();
+    void on_actionJapanese_triggered();
 
 private:
     Ui::MainWindow *ui;

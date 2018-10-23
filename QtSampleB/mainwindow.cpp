@@ -2,7 +2,6 @@
 #include "ui_mainwindow.h"
 #include <QTranslator>
 #include <QProcess>
-
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -16,10 +15,19 @@ MainWindow::~MainWindow()
 }
 
 
-void MainWindow::on_action_triggered()
+void MainWindow::on_actionChinese_Simplify_triggered()
 {
     QTranslator *translator=new QTranslator;
-        translator->load("../MultilingualSupportSoftware/simplify.qm");
+        translator->load("../QtSampleB/simplify.qm");
+        qApp->installTranslator(translator);
+        ui->retranslateUi(this);
+
+}
+
+void MainWindow::on_actionChinese_Tranitional_triggered()
+{
+    QTranslator *translator=new QTranslator;
+        translator->load("../QtSampleB/traditional.qm");
         qApp->installTranslator(translator);
         ui->retranslateUi(this);
 }
@@ -27,15 +35,15 @@ void MainWindow::on_action_triggered()
 void MainWindow::on_actionEnglish_triggered()
 {
     QTranslator *translator=new QTranslator;
-        translator->load("../MultilingualSupportSoftware/english.qm");
+        translator->load("../QtSampleB/english.qm");
         qApp->installTranslator(translator);
         ui->retranslateUi(this);
 }
 
-void MainWindow::on_actionChinese_Traditional_triggered()
+void MainWindow::on_actionJapanese_triggered()
 {
     QTranslator *translator=new QTranslator;
-        translator->load("../MultilingualSupportSoftware/traditional.qm");
+        translator->load("../QtSampleB/japanese.qm");
         qApp->installTranslator(translator);
         ui->retranslateUi(this);
 }
